@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Message</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!--BootStrap JS script tags-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--local CSS-->
+    <link rel="stylesheet" type="text/css" href="..\styles\main.css">
+    <!--tab icon link -->
+    <link rel="icon" href="../images/logo.png">
+    <!--local message JS-->
+    <script async type="text/javascript" src="../js/message.js"></script>
+</head>
+
+<body>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="../images/logo.png" class="logo">
+        <a class="navbar-brand" href=BootStrap.html>OddJobs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Location.html">Location</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Calculator.html">Calculator</a>
+                        <a class="dropdown-item" href="#">Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Login.html">Log in</a>
+                        <a class="dropdown-item" href="#">Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Find professionals..."
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!--end of navbar-->
+
+    <div id="form">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="icon">
+            <h1 id="formTitle">Try out messaging</h1>
+            <p id="subtitle">good choice ask us more about our services...</p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="response1"></div>
+        <input type="text area" placeholder="enter name" id="name1" />
+        <br>
+        <div id="inner-form">
+            <div id="feedback"></div>
+            <textarea rows="4" cols="50" id="msg1" placeholder="Write message here..."></textarea><br />
+        </div>
+        <div class="form-group" id="form-group">
+            <input type="submit" id="submit1" class="fadeIn fourth" value="Submit" />
+        </div> <!-- form-group// -->
+    </div>
+    <div id="form">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="icon">
+            <h1 id="formTitle">Try out messaging</h1>
+            <p id="subtitle">good choice ask us more about our services...</p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="response2"></div>
+        <input type="text area" placeholder="enter name" id="name2" />
+        <br>
+        <div id="inner-form">
+            <div id="feedback"></div>
+            <textarea rows="4" cols="50" id="msg2" placeholder="Write message here..."></textarea><br />
+        </div>
+        <div class="form-group" id="form-group">
+            <input type="submit" id="submit2" class="fadeIn fourth" value="Submit" />
+        </div> <!-- form-group// -->
+    </div>
+    <!--footer-->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <img src="../images/logo.png" class="logo">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+    <!--end of footer-->
+</body>
+
+</html>
