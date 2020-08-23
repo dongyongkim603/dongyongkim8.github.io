@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bootstrap example</title>
+    <title>Calculator</title>
     <!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="..\styles\main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
@@ -22,16 +22,17 @@
     <link rel="stylesheet" type="text/css" href="..\styles\main.css">
     <!--Calculator JS-->
     <script src="..\js\Calculator.js" defer></script>
+    <script src="../js/index.js" defer></script>
     <!--tab icon link -->
-    <link rel="icon" href="../images/logo.png">
+    <link rel="icon" href="../images/logoAlt.png">
 </head>
 
 <body>
 
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="../images/logo.png" class="logo">
-        <a class="navbar-brand" href=BootStrap.html>OddJobs</a>
+        <a class="navbar-brand" href=home.html><img src="../images/johnLogo.png" class="logo"
+                style="width: 106px; height: 106px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,79 +40,116 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Location.html">Location</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ContactForm.html">Contact</a>
+                </li>
                 <li class="nav-item dropdown">
+
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Projects
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="Login.html">Calculator</a>
-                        <a class="dropdown-item" href="#">Sign up</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+
+                        <a class="dropdown-item" href="Calculator.html">Calculator</a>
+                        <a class="dropdown-item" href="dictionary.html">Phonetic Dictionary</a>
+                        <a class="dropdown-item" href="Message.html">Instant Message</a>
+                        <!-- <a class="dropdown-item" href="tetrisy.html">Tetrisy</a> -->
                     </div>
                 </li>
                 <li class="nav-item dropdown">
+
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         User Account
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="Login.html">Log in</a>
-                        <a class="dropdown-item" href="#">Sign up</a>
+                        <a class="dropdown-item" href="Register.html">Sign up</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Find professionals..."
-                    aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search projects" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
     <!--end of navbar-->
-    <div class="">
-        <!--calculator-->
-        <div class="calculator-grid">
-            <div class="output">
-                <div data-previous-operand class="previous"></div>
-                <div data-current-operand class="current"></div>
-            </div>
-            <button data-delete class="span-two">DEL</button>
-            <button data-all-clear>CLR</button>
-            <button data-operation>/</button>
-            <button data-number>1</button>
-            <button data-number>2</button>
-            <button data-number>3</button>
-            <button data-operation>*</button>
-            <button data-number>4</button>
-            <button data-number>5</button>
-            <button data-number>6</button>
-            <button data-operation>+</button>
-            <button data-number>7</button>
-            <button data-number>8</button>
-            <button data-number>9</button>
-            <button data-operation>-</button>
-            <button data-number>.</button>
-            <button data-number>0</button>
-            <button data-equals>=</button>
-            <button data-operation>^</button>
-
+    <!--calculator-->
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous"></div>
+            <div data-current-operand class="current"></div>
         </div>
+        <button data-delete class="span-two">DEL</button>
+        <button data-all-clear>CLR</button>
+        <button data-operation>/</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals>=</button>
+        <button data-operation>^</button>
     </div>
     <!--footer-->
     <footer class="footer mt-auto py-3">
-        <div class="container">
-            <img src="../images/logo.png" class="logo">
-            <span class="text-muted">Place sticky footer content here.</span>
+        <div class="footer-container">
+            <a class="navbar-brand" href=home.html><img src="../images/johnLogo.png" class="logo"
+                    style="width: 106px; height: 106px; margin-left: 3rem;"></a>
+            <span class="text-muted"><a href="mailto: dongyonkim8@gmail.com">
+                    <img src="../images/icons8-important-mail-24.png"> Email: dongyongkim8@gmail.com
+                </a>
+            </span>
+            <span class="text-muted">
+                <img src="../images/icons8-phone-26.png"> Phone: (603) 244-0939
+            </span>
+            <span class="text-muted">
+                <a href="https://github.com/dongyongkim603">
+                    <img src="../images/icons8-github-24.png"> GitHub: dongyongkim603
+                </a>
+            </span>
+            <span class="text-muted">
+                <a href="https://www.linkedin.com/in/john-haney-280121140/">
+                    <img src="../images/icons8-linkedin-24.png"> LinkedIn: john-haney
+                </a>
+            </span>
+            <!--special hamburger -->
+            <div>
+                <p>More Info</p>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav">
+                    <div class="hamburger-content">
+                        Hello, This is about as straight forward as it gets. This is my implemention of a standard calculator. The 
+                        way I build it, I used HTML divs (the green section) for the output. This is what I target with the JavaScript file that I created as well. 
+                        The logic behind the script file targets the buttons and add event listeners to them. If you inspect this page you will 
+                        see that I do not use classes or id's to target the buttons, but rather I use the data identifiers to pass to the script file 
+                        the data between the div tags. 
+                        <br>
+                        If you are interested in looking at the script files or any other of my programs I have linked this program's GitHub to the footer. 
+                        Feel free to check it out and let me know if you have any questions.
+                    </div>
+                </nav>
+            </div>
+            <!--end of special hamburger -->
         </div>
     </footer>
     <!--end of footer-->

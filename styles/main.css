@@ -79,7 +79,7 @@ h3{font-size: var(--fs-h3)}
 
 #icon {   
     max-width: 150px;
-    padding-top: 10%;
+    padding: 1rem;
 }
 
 #formTitle{
@@ -166,7 +166,132 @@ input[type=text] {
     text-decoration: none;
   }
 
-  /*------------- Hours and Location ------------*/
+  /************** portfolio items ****************/
+
+.portfolio__item{
+    /* background: var(--clr-accent); */
+    overflow: hidden;
+}
+
+.portfolio__img{
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__item:focus{
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img{
+    transform: scale(1.2);
+    opacity: .75;
+}
+
+/************** special hamburger ******************/
+
+.nav{
+  position: fixed;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list{
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link{
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
+}
+
+.nav__link:hover{
+  color: var(--clr-accent);
+}
+
+.nav-toggle{
+  padding: .7em;
+  background: black;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.nav-open .nav{
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle{
+  position: fixed;
+}
+
+.nav-open .hamburger{
+  transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before{
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.hamburger{
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+  background: var(--clr-accent);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before{top: 6px;}
+.hamburger::after{bottom: 6px;}
+
+.hamburger-content{
+  background-color: rgba(21, 75, 26, 0.922); 
+  margin: auto;
+  border-radius: 15px 15px 15px 15px;
+  padding: 3rem;
+}
+
+/*------------- Hours and Location ------------*/
 
 section.facade {
 	padding: 25%;
@@ -194,9 +319,28 @@ body {
 /*---map div boxes---*/
 
 #map {
-  padding: 10px;
-  height: 400px;
-  width: 100%;
+  padding: 2rem;
+  padding-bottom: 2rem;
+  height: 30rem;
+  width: 30rem;
+  margin: auto;
+  border-radius: 25px;
+}
+
+#map-form{
+    background: #fff;
+    width: 45rem;
+    height: 45rem;
+    position: relative;
+    box-shadow: 0 30px 60px 0 rgba(100, 21, 124, 0.472);
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 15rem;
+    border-radius: 25px;
+    padding-bottom: 3%;
+    padding-top: 3%
 }
 
 #legend {
@@ -262,6 +406,8 @@ body {
 
   .services{
     margin-bottom: 4em;
+    background-image: linear-gradient(rgba(45, 85, 53, 0.822), rgba(58, 10, 51, 0.61));
+    border-radius: 15px 15px 15px 15px;
   }
 
   .service{
@@ -354,6 +500,7 @@ body {
     padding: 3rem;
     height: 25rem;
     width: 100%;
+    height: fit-content;
   }
   .about-me{
     max-width: 1000px;
@@ -448,6 +595,7 @@ body {
   grid-template-rows: minmax(120px, auto)repeat(5, 100px);
   box-shadow: 0 30px 60px 0 rgba(100, 21, 124, 0.472);
   border-radius: 15px 15px 15px 15px;
+  margin-bottom: 15rem;
 }
 
 .calculator-grid > button {
@@ -493,6 +641,8 @@ body {
     width: 100%; 
     margin: auto;
     justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
   }
 
   .footer {
@@ -501,10 +651,54 @@ body {
     bottom: 0;
     left: 0;
     z-index: 1030;
-    background-image: linear-gradient(rgb(245, 105, 226), rgb(197, 233, 205));
+    background-image: linear-gradient( rgb(197, 233, 205), rgb(189, 115, 179));
     border-radius: 15px 15px 15px 15px;
   }
 
   .text-muted{
     padding: 1rem;
+    grid-template-rows: auto;
+    margin: auto;
+  }
+
+  /*********** tetrisy ************/
+
+  #game-div{
+    background-color: rgb(204, 216, 157);
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .game-grid{
+    background-color: rgb(255, 255, 255);
+    width: 20rem;
+    height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .previous-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .previous-shape{
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: -5rem;
+  }
+
+  .block {
+    background-color: rgb(41, 48, 43);
+  }
+
+  .block2{
+    background-color: rgb(54, 94, 75);
+  }
+
+  .block3 {
+    background-color:  rgb(37, 5, 33);
   }

@@ -24,14 +24,14 @@
     <!--local css file-->
     <link rel="stylesheet" type="text/css" href="..\styles\main.css">
     <!--tab icon link -->
-    <link rel="icon" href="../images/logo.png">
+    <link rel="icon" href="../images/logoAlt.png">
 </head>
 
 <body onload="disableSubmit()">
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="../images/logo.png" class="logo">
-        <a class="navbar-brand" href=BootStrap.html>OddJobs</a>
+        <a class="navbar-brand" href=home.html><img src="../images/johnLogo.png" class="logo"
+                style="width: 106px; height: 106px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,131 +39,156 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Location.html">Location</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ContactForm.html">Contact</a>
+                </li>
                 <li class="nav-item dropdown">
+
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Projects
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
                         <a class="dropdown-item" href="Calculator.html">Calculator</a>
-                        <a class="dropdown-item" href="dictionary.html">Dictionary</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="dictionary.html">Phonetic Dictionary</a>
+                        <a class="dropdown-item" href="Message.html">Instant Message</a>
+                        <!-- <a class="dropdown-item" href="tetrisy.html">Tetrisy</a> -->
                     </div>
                 </li>
                 <li class="nav-item dropdown">
+
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         User Account
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="Login.html">Log in</a>
                         <a class="dropdown-item" href="Register.html">Sign up</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Find professionals..."
-                    aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search projects" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
     <!--end of navbar-->
-    <!--registration form-->
-    <div id="form">
-        <article class="card-body mx-auto" style="max-width: 400px;">
-            <div id="feedback"></div>
-            <h4 class="card-title mt-3 text-center">Create Account</h4>
-            <p class="text-center">Get started with your free account</p>
-            <p>
-                <a href="Login.html"><img src="../images/icons8-facebook-50.png" />
-                    <i class="fab fa-facebook-f"></i> &nbsp; Login via
-                    facebook</a>
-            </p>
-            <p class="divider-text">
-                <span class="bg-light">OR</span>
-            </p>
-            <form>
-                <div class="form-group input-group" id="validation">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><img src="../images/icons8-change-user-26.png" /> </span>
+    <div class="entrance" style="margin-bottom: 15rem;">
+        <!--registration form-->
+        <div id="form">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <div id="feedback"></div>
+                <h4 class="card-title mt-3 text-center">Create Account</h4>
+                <p class="text-center">Get started with your free account</p>
+                <p>
+                    <a href="Login.html"><img src="../images/icons8-facebook-50.png" />
+                        <i class="fab fa-facebook-f"></i> &nbsp; Login via
+                        facebook</a>
+                </p>
+                <p class="divider-text">
+                    <span class="bg-light">OR</span>
+                </p>
+                <form>
+                    <div class="form-group input-group" id="validation">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="../images/icons8-change-user-26.png" /> </span>
+                        </div>
+                        <input name="" class="form-control" id="firstName" placeholder="First name" type="text"
+                            required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><img src="../images/icons8-change-user-26.png" /> </span>
+                        </div>
+                        <input name="" class="form-control" id="lastName" placeholder="Last name" type="text" required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope"><img
+                                        src="../images/icons8-important-mail-24.png"></i> </span>
+                        </div>
+                        <input name="" class="form-control" id="email" placeholder="Email address" type="email"
+                            required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-phone"><img
+                                        src="../images/icons8-phone-26.png" /></i> </span>
+                        </div>
+                        <select class="custom-select" style="max-width: 120px;">
+                            <option selected="">+1</option>
+                            <option value="1">+55</option>
+                            <option value="2">+57</option>
+                            <option value="3">+701</option>
+                        </select>
+                        <input name="" class="form-control" id="phone" placeholder="(555) 555-5555" type="text"
+                            required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                        </div>
+                        <input type="date" id="birthDate" class="form-control" required>
+                    </div> <!-- form-group end.// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" id="passwordFirst" placeholder="Create password" type="password"
+                            required>
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input class="form-control" id="passwordSecond" placeholder="Repeat password" type="password"
+                            required>
                     </div>
-                    <input name="" class="form-control" id="firstName" placeholder="First name" type="text" required>
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><img src="../images/icons8-change-user-26.png" /> </span>
-                    </div>
-                    <input name="" class="form-control" id="lastName" placeholder="Last name" type="text" required>
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-envelope"><img
-                                    src="../images/icons8-important-mail-24.png"></i> </span>
-                    </div>
-                    <input name="" class="form-control" id="email" placeholder="Email address" type="email" required>
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-phone"><img
-                                    src="../images/icons8-phone-26.png" /></i> </span>
-                    </div>
-                    <select class="custom-select" style="max-width: 120px;">
-                        <option selected="">+1</option>
-                        <option value="1">+55</option>
-                        <option value="2">+57</option>
-                        <option value="3">+701</option>
-                    </select>
-                    <input name="" class="form-control" id="phone" placeholder="(555) 555-5555" type="text" required>
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                    </div>
-                    <input type="date" id="birthDate" class="form-control" required>
-                </div> <!-- form-group end.// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                    </div>
-                    <input class="form-control" id="passwordFirst" placeholder="Create password" type="password"
-                        required>
-                </div> <!-- form-group// -->
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                    </div>
-                    <input class="form-control" id="passwordSecond" placeholder="Repeat password" type="password"
-                        required>
-                </div>
-                <label>
-                    <input type="checkbox" id="accept" onchange="activateButton(this)">I accept <a href="#">terms</a>
-                </label>
-                <!-- form-group// -->
-                <div class="form-group" id="form-group">
-                    <input type="submit" id="submit" class="fadeIn fourth" value="Submit" />
-                </div> <!-- form-group// -->
-                <p class="text-center">Have an account? <a href="Login.html">Log In</a> </p>
-            </form>
-        </article>
-    </div>
-    <!--footer-->
-    <footer class="footer mt-auto py-3">
-        <div class="container">
-            <img src="../images/logo.png" class="logo">
-            <span class="text-muted">Place sticky footer content here.</span>
+                    <label>
+                        <input type="checkbox" id="accept" onchange="activateButton(this)"> I accept <a
+                            href="#">terms</a>
+                    </label>
+                    <!-- form-group// -->
+                    <div class="form-group" id="form-group">
+                        <input type="submit" id="submit" class="fadeIn fourth" value="Submit" />
+                    </div> <!-- form-group// -->
+                    <p class="text-center">Have an account? <a href="Login.html">Log In</a> </p>
+                </form>
+            </article>
         </div>
-    </footer>
-    <!--end of footer-->
+        <!--footer-->
+        <footer class="footer mt-auto py-3">
+            <div class="footer-container">
+                <a class="navbar-brand" href=home.html><img src="../images/johnLogo.png" class="logo"
+                        style="width: 106px; height: 106px; margin-left: 3rem;"></a>
+                <span class="text-muted"><a href="mailto: dongyonkim8@gmail.com">
+                        <img src="../images/icons8-important-mail-24.png"> Email: dongyongkim8@gmail.com
+                    </a>
+                </span>
+                <span class="text-muted">
+                    <img src="../images/icons8-phone-26.png"> Phone: (603) 244-0939
+                </span>
+                <span class="text-muted">
+                    <a href="https://github.com/dongyongkim603">
+                        <img src="../images/icons8-github-24.png"> GitHub: dongyongkim603
+                    </a>
+                </span>
+                <span class="text-muted">
+                    <a href="https://www.linkedin.com/in/john-haney-280121140/">
+                        <img src="../images/icons8-linkedin-24.png"> LinkedIn: john-haney
+                    </a>
+                </span>
+            </div>
+        </footer>
+        <!--end of footer-->
 </body>
 
 </html>
