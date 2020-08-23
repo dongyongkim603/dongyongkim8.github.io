@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Message</title>
-    <!-- CSS only -->
+    <title>MP3 Player</title>
+    <!-- BootStrap CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -18,13 +18,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="../js/index.js" async></script>
     <!--local CSS-->
     <link rel="stylesheet" type="text/css" href="..\styles\main.css">
     <!--tab icon link -->
     <link rel="icon" href="../images/logoAlt.png">
-    <!--local message JS-->
-    <script async type="text/javascript" src="../js/message.js"></script>
-    <script src="../js/index.js" defer></script>
+
 </head>
 
 <body>
@@ -98,40 +97,8 @@
         </div>
     </nav>
     <!--end of navbar-->
-    <div id="form">
-        <div class="icon">
-            <h1 id="formTitle">Try out messaging</h1>
-        </div>
-        <!-- messaging Form -->
-        <div id="response1" style="padding-top: 2rem;"></div>
-        <input type="text area" placeholder="enter name" id="name1" />
-        <br>
-        <div id="inner-form">
-            <div id="feedback"></div>
-            <textarea rows="4" cols="50" id="msg1" placeholder="Write message here..."></textarea><br />
-        </div>
-        <div class="form-group" id="form-group">
-            <input type="submit" id="submit1" class="fadeIn fourth" value="Submit" />
-        </div>
-        <!-- form-group// -->
-    </div>
+    <div class="entrance" style="margin-bottom: 15rem;">
 
-    <div id="form" style="margin-bottom: 15rem;">
-        <div class="icon">
-            <h1 id="formTitle">Try out messaging</h1>
-        </div>
-
-        <!-- Login Form -->
-        <div id="response2" style="padding-top: 2rem;"></div>
-        <input type="text area" placeholder="enter name" id="name2" />
-        <br>
-        <div id="inner-form">
-            <div id="feedback"></div>
-            <textarea rows="4" cols="50" id="msg2" placeholder="Write message here..."></textarea><br />
-        </div>
-        <div class="form-group" id="form-group">
-            <input type="submit" id="submit2" class="fadeIn fourth" value="Submit" />
-        </div> <!-- form-group// -->
     </div>
     <!--footer-->
     <footer class="footer mt-auto py-3">
@@ -146,7 +113,7 @@
                 <img src="../images/icons8-phone-26.png"> Phone: (603) 244-0939
             </span>
             <span class="text-muted">
-                <a href="https://github.com/dongyongkim603">
+                <a href="https://github.com/dongyongkim603/Phonetic-Dictionary">
                     <img src="../images/icons8-github-24.png"> GitHub: dongyongkim603
                 </a>
             </span>
@@ -163,15 +130,25 @@
                 </button>
                 <nav class="nav">
                     <div class="hamburger-content">
-                        Hello, this page is a prototype for a instant messaging application. The way it works is it uses
-                        some JavaScript to
-                        find the text fields and areas and creates variables from thier inputs. The script also adds
-                        event listeners that
-                        look for either the submit button to be clicked or for the users to hit the enter key.
-                        Currently, this is just a prototype
-                        and therefor there isn't any network capabilities.
-                        <br>
-                        <br>
+                        Hello, this project was part of an assignment I had durring my job trainings at Per
+                        Scholas. The
+                        objective here was to create a script program using JavaScrip that would take in a .txt file and
+                        search it for
+                        the proper values. This file was a large phonetic dictionary. The program goes through the file
+                        and filters out
+                        text that is not part of the word listings by checking each line with regular expression.
+                        Filtered results are put
+                        into a new array that is used to save time since the contense will need to be parsed several
+                        times. Listed are the
+                        different serach functions:
+                        <br />
+                        <ol>
+                            <li>Search for the word itself</li>
+                            <li>Search for any words with identical phenologies</li>
+                            <li>Search for words that are the same with one phoneme replaced</li>
+                            <li>Search for any words that are the same with one phoneme removed</li>
+                        </ol>
+                        <br />
                         If you are interested in looking at the script files or any other of my programs I have linked
                         this program's GitHub to the footer.
                         Feel free to check it out and let me know if you have any questions.

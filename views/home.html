@@ -36,6 +36,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="Location.html">Location</a>
                 </li>
                 <li class="nav-item">
@@ -45,7 +48,7 @@
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Projects
+                        Front-End
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -60,13 +63,27 @@
 
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Java
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="Dijkstra.html">Dijkstra</a>
+                        <a class="dropdown-item" href="CMS.html">CMS</a>
+                        <a class="dropdown-item" href="MP3Player.html">MP3 Player</a>
+                        <!-- <a class="dropdown-item" href="tetrisy.html">Tetrisy</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         User Account
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="Login.html">Log in</a>
                         <a class="dropdown-item" href="Register.html">Sign up</a>
-                        <div class="dropdown-divider"></div>
                     </div>
                 </li>
             </ul>
@@ -98,7 +115,7 @@
     <!--What I do section-->
     <section class="my-services" id="services">
         <h2 class="section__title section__title--services">What I do</h2>
-        <div class="services">
+        <div class="services" style="padding: 1.5rem;">
             <div class="service">
                 <h3 style="margin-bottom: 1rem;">Front-End Development</h3>
                 <p>Passionate about simple effective design patterns. I have been developing front-ends for my web
@@ -117,28 +134,28 @@
                     application. To me the back end is the soul of an applications allowing its user to be able to
                     connect and gain value on a human level.</p>
             </div>
-            <div class="service">
+            <!-- <div class="service">
                 <h3 style="margin-bottom: 1rem;">Machine Learning</h3>
                 <p>Infatuated with creating dynamic client side applications by coing the most effcient back-ends. I
                     have a deep knowledge of Java and have been working with serves such as MySQL and MariaDB. I also
                     have created several projects utilizing the Rails framework to prototype a functional web
                     application. To me the back end is the soul of an applications allowing its user to be able to
                     connect and gain value on a human level.</p>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--Flexbox gid-->
+    <!--Front-End Projects-->
     <div class="album py-5 bg-light">
-        <h2 class="section__title section__title--services" style="text-align: center;">My Projects</h2>
+        <h2 class="section__title section__title--services" style="text-align: center;">Front-End Projects</h2>
         <div class="container">
 
             <div class="row">
+                <!--project card 1-->
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow" id="grid-tiles">
-                        <!--carousel1-->
-
-                        <!--end of carousel-->
                         <div class="card-body">
+                            <h3>Calculator</h3>
                             <a href="Calculator.html" class="portfolio__item">
                                 <img src="../images/icons8-calculator-50.png" style="padding: 2rem;"
                                     class="portfolio__img">
@@ -156,18 +173,18 @@
                         </div>
                     </div>
                 </div>
+                <!--project card 2-->
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <!--carousel2-->
-
-                        <!--end of carousel-->
                         <div class="card-body">
+                            <h3>Phenology Dictonary</h3>
                             <a href="dictionary.html" class="portfolio__item">
-                                <img src="../images/icons8-dictionary-50.png" style="padding: 2rem;"  class="portfolio__img">
+                                <img src="../images/icons8-dictionary-50.png" style="padding: 2rem;"
+                                    class="portfolio__img">
                             </a>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This is a project using mostly JavaScript, that takes in a
+                                .txt dictionary file,
+                                and allows the you to search the dictionary for word Phenologies.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-primary" id="button-color"
@@ -177,22 +194,100 @@
                         </div>
                     </div>
                 </div>
+                <!--project card 3-->
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <!--carousel3-->
-
-                        <!--end of carousel-->
                         <div class="card-body">
+                            <h3>Instant Messaging</h3>
                             <a href="Message.html" class="portfolio__item">
-                                <img src="../images/icons8-messaging-60.png" style="padding: 2rem;" class="portfolio__img">
+                                <img src="../images/icons8-messaging-60.png" style="padding: 2rem;"
+                                    class="portfolio__img">
                             </a>
-                            <p class="card-text">This is a wider card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">This project utilizes JavaScript and to access the HTML DOM object to
+                                create an
+                                instant messaging effect.
+                            </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-primary" id="button-color"
                                         onclick="window.location.href='ContactForm.html';">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Featured Back-End Projects-->
+    <div class="album py-5 bg-light">
+        <h2 class="section__title section__title--services" style="text-align: center;">Back-End Projects</h2>
+        <div class="container">
+
+            <div class="row">
+                <!--project card 1-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow" id="grid-tiles">
+                        <div class="card-body">
+                            <h3>Dijkstra Algorithm</h3>
+                            <a href="Dijkstra.html" class="portfolio__item">
+                                <img src="../images/icons8-decentralized-network-50.png" style="padding: 2rem;"
+                                    class="portfolio__img">
+                            </a>
+                            <p class="card-text">This Java based program, makes use of the famous algorithm by Edsger W.
+                                Dijkstra. This
+                                shortest path first, greedy search, algorithm, is designed to find the shortest path
+                                between any two points on a
+                                weighted driected graph.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary" id="button-color"
+                                        onclick="window.location.href='Dijlstra.html';">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project card 2-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            <h3>Customer and Inventory Management System</h3>
+                            <a href="CMS.html" class="portfolio__item">
+                                <img src="../images/icons8-shop-48.png" style="padding: 2rem;"
+                                    class="portfolio__img">
+                            </a>
+                            <p class="card-text">This is a large program that was created for my Advanced Data Structes class that functions
+                                as a customer and inventory managemnt system for a hypothetical video rental store. The program additionally,
+                                has a feature that allows the user to choose which data structure to use and a testing program.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary" id="button-color"
+                                        onclick="window.location.href='CMS.html';">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--project card 3-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body">
+                            <h3>Prototype MP3 Player</h3>
+                            <a href="MP3Player.html" class="portfolio__item">
+                                <img src="../images/icons8-mp3-100.png" style="padding: 2rem;"
+                                    class="portfolio__img">
+                            </a>
+                            <p class="card-text">This project utilizes Javazoom, an open source library that allows the JVM to
+                                create player objects that utilize threads to play MP3s. The player is currently command line driven and 
+                                also makes use of the doubly linked list to create playlists.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-primary" id="button-color"
+                                        onclick="window.location.href='MP3Player.html';">View</button>
                                 </div>
                             </div>
                         </div>

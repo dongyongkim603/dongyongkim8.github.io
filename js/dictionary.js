@@ -7,24 +7,25 @@ let searchAnswer;//the return value of the initial search
 let addPhenome = []; //contains the phase IV add phoneme
 let replacePhoneme = []; //contains the phase III replace phoneme
 let resetBool = true;
+let results;
 
 //creates an event listener on the upload file button in HTML
-//document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+
 //
-// window.onload = function () {
-//     console.log("loaded");
-//     loadText();
-// }
-// //-----------------------page load functions-------------------------
+function initialize() {
+    let ul1 = document.getElementById('results-dictionary');
+    console.log(ul1);
+    let nMessage = document.createElement('p');
+    userInput = document.getElementById("name1").value;
+    userInput = userInput.toUpperCase();
+    console.log(userInput + " first");
+    startSearch();
+    nMessage.textContent = "Here are the results: \n " + results;
+    ul1.appendChild(nMessage);
+}
 
-// function loadText() {
-//     fetch('../cmudict.txt').then(function (response) {
-//         console.log("hello!");
-//     })
-
-// }
-
-let dom = window.URL.createObjectURL()
+//-----------------------page load functions-------------------------
 
 /**
  * Takes in and reads a file from the upload button.
@@ -38,7 +39,7 @@ function readSingleFile(uploadedFile) {
         const reader = new FileReader();
         reader.onload = function (e) {
             let contents = e.target.result;
-            //console.log("Where the content is: ", contents.split("\n"))
+            console.log("Where the content is: ", contents.split("\n"))
             mainEntry(contents);
         }
         console.log(reader.readAsText(file));
@@ -53,7 +54,7 @@ function readSingleFile(uploadedFile) {
  * @param {*} fileContentLoaded 
  */
 function mainEntry(fileContentLoaded) {
-    console.log("Where the content is: ", fileContentLoaded.split("\n"))
+    //console.log("Where the content is: ", fileContentLoaded.split("\n"))
     fileArray = fileContentLoaded.split("\n");//seperates elements in array at the new line
 }
 
@@ -85,8 +86,10 @@ function splitOnSpace(line) {
 function startSearch() {
     if (resetBool) {
         const letters1 = /^[A-Za-z]+$/;
-        while (userInput == 0 || !userInput.match(letters1)) {
-            userInput = prompt("Please enter a word").toUpperCase();
+        if (userInput == 0 || !userInput.match(letters1)) {
+            alert("serach can only contain letters without spaces");
+            location.reload();
+            return;
         }
         filerArray();
         searchAnswer = searchAllLines(userInput);
@@ -97,14 +100,18 @@ function startSearch() {
             searchAllReplace(searchAnswer.after);
             printResults();
             resetBool = false;
+            return;
         } else {
             console.log(`not found`);
+            results = `word not found...`
             resetBool = false;
+            return;
         }
     } else {
         reset();
         startSearch();
         console.log("reset");
+        return;
     }
 }
 
@@ -313,6 +320,8 @@ function printResults() {
     }
     console.log(`>${searchAnswer.before} \n \nPronunciation:   ${searchAnswer.after} 
     \n \nIdentical:   ${concatinatedString} \n \nReplace Phoneme:  ${concatinatedString2} \n \nAdd phoneme:  ${concatinatedString3}`);
+    results = `>${searchAnswer.before} \n \nPronunciation:   ${searchAnswer.after} 
+    \n \nIdentical:   ${concatinatedString} \n \nReplace Phoneme:  ${concatinatedString2} \n \nAdd phoneme:  ${concatinatedString3}`;
 }
 
 /**
